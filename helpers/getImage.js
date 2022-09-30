@@ -4,6 +4,7 @@ export const getImage = async (requestBody) => {
   console.log("Requesting:" + requestBody.url);
 
   const responce = await new Promise((resolve, reject) => {
+    // Send get request to receive image
     request.get(requestBody, (err, res, responceBody) => {
       if (err) {
         reject(err);
